@@ -1,7 +1,7 @@
 ﻿<?php
 
 // Replace this with your own email address
-$siteOwnersEmail = "jayyunas@gmail.com";
+$siteOwnersEmail = 'jayyunas@gmail.com';
 
 
 if($_POST) {
@@ -20,11 +20,13 @@ if($_POST) {
 		$error['email'] = "Please enter a valid email address.";
 	}
 	// Check Message
-	if (strlen($contact_message) < 15) {
-		$error['message'] = "Please enter your message. It should have at least 15 characters.";
+	if (strlen($contact_message) < 5) {
+		$error['message'] = "Please enter your message. It should have at least 5 characters.";
 	}
    // Subject
-	if ($subject == '') { $subject = "Contact Form Submission"; }
+	if ($subject == '') { 
+		$subject = "Contact Form Submission"; 
+	}
 
 
    // Set Message
@@ -49,9 +51,9 @@ if($_POST) {
       ini_set("sendmail_from", $siteOwnersEmail); // for windows server
       $mail = mail($siteOwnersEmail, $subject, $message, $headers);
 
-		if ($mail) { echo "OK"; }
-      else { echo "Something went wrong. Please try again."; }
-
+		if ($mail) { echo "Thank you for reaching out!"; }
+      else { echo "Please try again."; }
+		
 	} # end if - no validation error
 
 	else {
@@ -59,7 +61,7 @@ if($_POST) {
 		$response = (isset($error['name'])) ? $error['name'] . "<br /> \n" : null;
 		$response .= (isset($error['email'])) ? $error['email'] . "<br /> \n" : null;
 		$response .= (isset($error['message'])) ? $error['message'] . "<br />" : null;
-
+		
 		echo $response;
 
 	} # end if - there was a validation error
