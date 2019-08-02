@@ -1529,7 +1529,7 @@ header .header-logo a {
  * ------------------------------------------------------------------- */
 
 #menu-nav-wrap {
-    background: #040958;
+    background: black;
     color: rgba(255, 255, 255, 0.25);
     font-size: 1.5rem;
     line-height: 1.6;
@@ -1547,16 +1547,16 @@ header .header-logo a {
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
     transform: translateX(100%);
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 #menu-nav-wrap a,
 #menu-nav-wrap a:visited {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255);
 }
 
 #menu-nav-wrap a:hover,
@@ -1822,7 +1822,6 @@ header .header-logo a {
 
 
 /* scroll down */
-
 .scrolldown {
     position: absolute;
     bottom: 0;
@@ -1834,70 +1833,57 @@ header .header-logo a {
     -ms-transform-origin: right top 0;
     transform-origin: right top 0;
     float: right;
-}
-
-.scrolldown i {
+  }
+  .scrolldown i {
     padding-left: 9px;
-}
-
-.scrolldown a:hover,
-.scrolldown a:focus,
-.scrolldown a:active {
+  }
+  .scrolldown a:hover, .scrolldown a:focus, .scrolldown a:active {
     color: #151515 !important;
-}
-
-html[data-useragent*="MSIE 10.0"] .scrolldown,
-.oldie .scrolldown {
+  }
+  
+  html[data-useragent*='MSIE 10.0'] .scrolldown,
+  .oldie .scrolldown {
     display: none;
-}
-
-.scroll-icon {
+  }
+  
+  .scroll-icon {
     display: inline-block;
     font-family: "montserrat-bold", sans-serif;
     font-size: 1.4rem;
     text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    color: #ffffff !important;
+    letter-spacing: .3rem;
+    color: #FFFFFF !important;
     background: transparent;
     position: relative;
     top: 36px;
     right: 42px;
     -webkit-animation: animate-it 3s ease infinite;
     animation: animate-it 3s ease infinite;
-}
-
-
-/* vertical animation */
-
-@-webkit-keyframes animate-it {
-    0%,
-    60%,
-    80%,
-    100% {
-        -webkit-transform: translateX(0);
+  }
+  
+  /* vertical animation */
+  @-webkit-keyframes animate-it {
+    0%, 60%, 80%, 100% {
+      -webkit-transform: translateX(0);
     }
     20% {
-        -webkit-transform: translateX(-5px);
+      -webkit-transform: translateX(-5px);
     }
     40% {
-        -webkit-transform: translateX(20px);
+      -webkit-transform: translateX(20px);
     }
-}
-
-@keyframes animate-it {
-    0%,
-    60%,
-    80%,
-    100% {
-        -webkit-transform: translateX(0);
+  }
+  @keyframes animate-it {
+    0%, 60%, 80%, 100% {
+      -webkit-transform: translateX(0);
     }
     20% {
-        -webkit-transform: translateX(-5px);
+      -webkit-transform: translateX(-5px);
     }
     40% {
-        -webkit-transform: translateX(20px);
+      -webkit-transform: translateX(20px);
     }
-}
+  }
 
 
 /* -------------------------------------------------------------------
