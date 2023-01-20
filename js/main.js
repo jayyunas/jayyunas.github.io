@@ -9,7 +9,7 @@
 
     var cfg = {
             defAnimation: "fadeInUp", // default css animation		
-            scrollDuration: 200, // smoothscroll duration
+            scrollDuration: 50, // smoothscroll duration
         },
 
         $WIN = $(window);
